@@ -5,10 +5,11 @@ import App from './components/App';
 // import reportWebVitals from './reportWebVitals';
 
 // render micro frontend function
-window.rendercreatereactapp = (containerId, history) => {
+window.rendercreatereactapp = (containerId, history, data) => {
+    console.log('data', containerId, history, data);
     ReactDOM.render(
         <React.StrictMode>
-            <App history={history}/>
+            <App history={history} data={data}/>
         </React.StrictMode>,
         document.getElementById(containerId)
     );

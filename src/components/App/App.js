@@ -1,7 +1,7 @@
 import TodoApp from '../TooApp';
 import PropTypes from 'prop-types';
 
-const App = ({ todoData:data, handleMouseLeave }) => {
+const App = ({ data, handleMouseLeave }) => {
     const initialHandleMouseLeave = (items) => {
         console.log('initialHandleMouseLeave', items)
     };
@@ -14,7 +14,7 @@ const App = ({ todoData:data, handleMouseLeave }) => {
 
     return (
         <>
-            <TodoApp todoData={todoData || data} handleMouseLeave={handleMouseLeave || initialHandleMouseLeave} />
+            <TodoApp todoData={data || todoData} handleMouseLeave={handleMouseLeave || initialHandleMouseLeave} />
         </>
     );
 };
